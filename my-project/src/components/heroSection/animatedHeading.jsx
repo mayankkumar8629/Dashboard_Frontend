@@ -5,40 +5,31 @@ export default function AnimatedHeading() {
   const [currentColor, setCurrentColor] = useState(0);
   const fullText = "Where Creators Become Brands";
   
-  // Color palette options
-//   const colors = [
-//     'text-blue-400',  // Blue
-//     'text-purple-400', // Purple
-//     'text-emerald-400', // Green
-//     'text-amber-400',  // Amber
-//     'text-rose-400'    // Pink
-//   ];
-
-    const colors = [
-  // Blue-Purple
-  'bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent',
-  
-  // Electric Green
-  'bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent',
-  
-  // Sunset
-  'bg-gradient-to-r from-amber-400 to-pink-500 bg-clip-text text-transparent',
-  
-  // Neon
-  'bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent',
-  
-  // Berry
-  'bg-gradient-to-r from-rose-400 to-fuchsia-500 bg-clip-text text-transparent',
-  
-  // Fire
-  'bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent',
-  
-  // Ocean
-  'bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent',
-  
-  // Candy
-  'bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent'
-];
+  const colors = [
+    // Bright White with subtle gradient
+    'bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent',
+    
+    // Golden/Yellow - pops on blue
+    'bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent',
+    
+    // Electric Green - high contrast
+    'bg-gradient-to-r from-lime-300 to-green-400 bg-clip-text text-transparent',
+    
+    // Coral/Orange - warm and vibrant
+    'bg-gradient-to-r from-orange-300 to-red-400 bg-clip-text text-transparent',
+    
+    // Pink - feminine and bright
+    'bg-gradient-to-r from-pink-300 to-rose-400 bg-clip-text text-transparent',
+    
+    // Cyan - complementary to blue
+    'bg-gradient-to-r from-cyan-300 to-teal-400 bg-clip-text text-transparent',
+    
+    // Light Purple - soft contrast
+    'bg-gradient-to-r from-violet-300 to-purple-400 bg-clip-text text-transparent',
+    
+    // Silver/Metallic
+    'bg-gradient-to-r from-gray-300 to-slate-400 bg-clip-text text-transparent'
+  ];
 
   useEffect(() => {
     let timeout;
@@ -75,7 +66,7 @@ export default function AnimatedHeading() {
     typeWriter();
 
     return () => clearTimeout(timeout);
-  }, [currentColor]); // Reset animation when color changes
+  }, [currentColor]);
 
   return (
     <h1 className={`text-4xl md:text-5xl font-bold mb-6 text-center tracking-tight ${colors[currentColor]}`}>
