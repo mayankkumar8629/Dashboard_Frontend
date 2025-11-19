@@ -34,7 +34,7 @@ export default function GradientButton() {
       
       {/* Button content */}
       <span className="relative z-10 flex items-center">
-        🚀 Generate Now
+        🚀 Dashboard
       </span>
 
       {/* Subtle blue glow */}

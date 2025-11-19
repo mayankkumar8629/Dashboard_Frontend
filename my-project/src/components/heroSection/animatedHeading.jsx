@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 export default function AnimatedHeading() {
   const [displayText, setDisplayText] = useState('');
   const [currentColor, setCurrentColor] = useState(0);
-  const fullText = "Build React Components Instantly";
+  const fullText = "Where Creators Become Brands";
   
   // Color palette options
 //   const colors = [
